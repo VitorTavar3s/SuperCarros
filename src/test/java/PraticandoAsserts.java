@@ -1,24 +1,34 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Arrays;
-
 public class PraticandoAsserts {
 
+    // 2x AssertTrue
+    // 2x AssertFalse
+    // 1x AssertNull
+    // 1x AssertNotNull
+    // 2x AssertEquals - primitivo
+    // 2x AssertEquals - object
+
+    // 1x - AssertArrayEquals
+    // 1x - assertSame
+    // 1x - assertNotSame
+
+
+    /*@Test
+    public void praticandoAssertTrue(){
+        Carro carro = new Carro();
+        Assert.assertTrue(condicao);
+    }*/
+
     @Test
-    public void praticandoAssertTrue() {
-        Boolean condicao = true;
+    public void praticandoAssertFalse(){
+        Boolean condicao = false;
         Assert.assertTrue(condicao);
     }
 
     @Test
-    public void praticandoAssertFalse() {
-        Boolean condicao = false;
-        Assert.assertFalse(condicao);
-    }
-
-    @Test
-    public void praticandoAssertNull() {
+    public void praticandoAssertNull(){
         String nome = null;
         Assert.assertNull(nome);
     }

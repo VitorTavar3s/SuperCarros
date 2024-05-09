@@ -10,7 +10,7 @@ public class Main {
      * - Ligar/Desligar
      * - Acelerar
      * - Frear
-     * - Motrar estado atual
+     * - Mostrar estado atual
      *
      * Regras:
      * - Só podemos desligar o carro quando ele parar (velocidadeAtual = 0)
@@ -23,10 +23,59 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        String a = "Renan";
-        String b = new String("Renan");
 
-        System.out.println(a.equals(b));
+        // Gherkin
+        // Given (Dado) - When (Quando) - Then (Então)
+        testeDeveLigarCorretamente();
+        testeDeveDesligarCorretamente();
+        testeDeveAcelerarCorretamete();
+
+    }
+
+    public static void testeDeveLigarCorretamente() {
+        // Teste 01 - Validar se o carro liga corretamente
+        // Given
+        Carro carro = new Carro();
+        // When
+        carro.ligarCarro();
+        // Then
+        System.out.println("testeDeveLigarCorretamente: " + carro.getLigado());
+    }
+
+    public static void testeDeveDesligarCorretamente() {
+        // Given
+        Carro carro = new Carro();
+        carro.ligarCarro();
+
+        // When
+        carro.desligarCarro();
+
+        // Then
+        System.out.println("testeDeveDesligarCorretamente: " + (carro.getLigado() == false));
+    }
+
+    public static void testeDeveAcelerarCorretamete() {
+        // Dado
+        // carro ligado
+        Carro carro = new Carro();
+        carro.ligarCarro();
+
+        // Quando
+        // acelerar
+        //carro.setVelocidadeAtual(10);
+        //Integer velocidade =carro.getVelocidadeAtual();
+        carro.acelerar();
+
+        // Entao
+        // velocidade == ?
+        System.out.printf("testeDeveAcelerarCorretamete:"+ (carro.getVelocidadeAtual() == 10));
+        //System.out.printf(carro.getVelocidadeAtual().toString());
+    }
+
+    public static void testeDeveFrearCorretamente(){
+        Carro carro = new Carro();
+        carro.ligarCarro();
+        int velocidade =carro.getVelocidadeAtual();
 
 
     }
