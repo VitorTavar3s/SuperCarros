@@ -20,6 +20,10 @@ public class Carro {
         this.marca = marca;
     }
 
+    public Carro(String cor) {
+        this.cor = cor;
+    }
+
     public String getCor() {
         return cor;
     }

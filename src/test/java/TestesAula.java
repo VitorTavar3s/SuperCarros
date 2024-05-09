@@ -78,6 +78,14 @@ public class TestesAula {
         Assert.assertNotSame(meuCarro,carroPropaganda);
     }
 
+    @Test
+    public void testeCarrosCoresIguais(){
+        Carro carro1 = new Carro("Azul");
+        Carro carro2 = new Carro("Azul");
+
+        Assert.assertEquals(carro1,carro2);
+    }
+
 
     @Test
     public void testarListaDeComprasComListaDeEstoque() {
